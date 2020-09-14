@@ -1,5 +1,5 @@
 {
-  "name": "@swimlane/ngx-charts-shlatchz",
+  "name": "@ronyf/ngx-charts",
   "version": "12.1.2",
   "description": "Declarative Charting Framework for Angular",
   "main": "release/index.js",
