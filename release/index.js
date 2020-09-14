@@ -1,5 +1,5 @@
 /**
- * ngx-charts v"12.1.0" (https://github.com/swimlane/ngx-charts)
+ * ngx-charts v"12.1.1" (https://github.com/swimlane/ngx-charts)
  * Copyright 2019
  * Licensed under MIT
  */
@@ -14452,69 +14452,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "AreaChartNormalizedComponent", function() { return __WEBPACK_IMPORTED_MODULE_2__area_chart__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "AreaChartStackedComponent", function() { return __WEBPACK_IMPORTED_MODULE_2__area_chart__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "AreaSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_2__area_chart__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bar_chart__ = __webpack_require__("./src/bar-chart/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarChartModule", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontalComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontal2DComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontalNormalizedComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["e"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontalStackedComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["f"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SeriesHorizontal", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["m"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarLabelComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["g"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVerticalComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["i"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVertical2DComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["h"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVerticalNormalizedComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["j"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVerticalStackedComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["k"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "D0Types", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["l"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SeriesVerticalComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__bar_chart__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bubble_chart__ = __webpack_require__("./src/bubble-chart/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BubbleChartModule", function() { return __WEBPACK_IMPORTED_MODULE_4__bubble_chart__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BubbleChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bubble_chart__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getDomain", function() { return __WEBPACK_IMPORTED_MODULE_4__bubble_chart__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getScale", function() { return __WEBPACK_IMPORTED_MODULE_4__bubble_chart__["e"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BubbleSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bubble_chart__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__force_directed_graph__ = __webpack_require__("./src/force-directed-graph/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ForceDirectedGraphModule", function() { return __WEBPACK_IMPORTED_MODULE_5__force_directed_graph__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ForceDirectedGraphComponent", function() { return __WEBPACK_IMPORTED_MODULE_5__force_directed_graph__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__heat_map__ = __webpack_require__("./src/heat-map/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatMapModule", function() { return __WEBPACK_IMPORTED_MODULE_6__heat_map__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatMapComponent", function() { return __WEBPACK_IMPORTED_MODULE_6__heat_map__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatMapCellComponent", function() { return __WEBPACK_IMPORTED_MODULE_6__heat_map__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatCellSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_6__heat_map__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__line_chart__ = __webpack_require__("./src/line-chart/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineChartModule", function() { return __WEBPACK_IMPORTED_MODULE_7__line_chart__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_7__line_chart__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineComponent", function() { return __WEBPACK_IMPORTED_MODULE_7__line_chart__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_7__line_chart__["d"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__polar_chart__ = __webpack_require__("./src/polar-chart/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PolarChartModule", function() { return __WEBPACK_IMPORTED_MODULE_8__polar_chart__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PolarChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_8__polar_chart__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PolarSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_8__polar_chart__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__number_card__ = __webpack_require__("./src/number-card/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NumberCardModule", function() { return __WEBPACK_IMPORTED_MODULE_9__number_card__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NumberCardComponent", function() { return __WEBPACK_IMPORTED_MODULE_9__number_card__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "CardComponent", function() { return __WEBPACK_IMPORTED_MODULE_9__number_card__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "CardSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_9__number_card__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pie_chart__ = __webpack_require__("./src/pie-chart/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieChartModule", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "AdvancedPieChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieArcComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieGridComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["e"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieGridSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["f"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["h"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieLabelComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__pie_chart__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__tree_map__ = __webpack_require__("./src/tree-map/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapModule", function() { return __WEBPACK_IMPORTED_MODULE_11__tree_map__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__tree_map__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapCellComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__tree_map__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapCellSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__tree_map__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__gauge__ = __webpack_require__("./src/gauge/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeModule", function() { return __WEBPACK_IMPORTED_MODULE_12__gauge__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeArcComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__gauge__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeAxisComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__gauge__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__gauge__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LinearGaugeComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__gauge__["e"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sparkline__ = __webpack_require__("./src/sparkline/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SparklineModule", function() { return __WEBPACK_IMPORTED_MODULE_3__sparkline__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SparklineComponent", function() { return __WEBPACK_IMPORTED_MODULE_3__sparkline__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bar_chart__ = __webpack_require__("./src/bar-chart/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarChartModule", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontalComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontal2DComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontalNormalizedComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarHorizontalStackedComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["f"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SeriesHorizontal", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["m"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarLabelComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["g"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVerticalComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["i"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVertical2DComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["h"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVerticalNormalizedComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["j"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BarVerticalStackedComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["k"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "D0Types", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["l"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "SeriesVerticalComponent", function() { return __WEBPACK_IMPORTED_MODULE_4__bar_chart__["n"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bubble_chart__ = __webpack_require__("./src/bubble-chart/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BubbleChartModule", function() { return __WEBPACK_IMPORTED_MODULE_5__bubble_chart__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BubbleChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_5__bubble_chart__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getDomain", function() { return __WEBPACK_IMPORTED_MODULE_5__bubble_chart__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getScale", function() { return __WEBPACK_IMPORTED_MODULE_5__bubble_chart__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BubbleSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_5__bubble_chart__["c"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__force_directed_graph__ = __webpack_require__("./src/force-directed-graph/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ForceDirectedGraphModule", function() { return __WEBPACK_IMPORTED_MODULE_6__force_directed_graph__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ForceDirectedGraphComponent", function() { return __WEBPACK_IMPORTED_MODULE_6__force_directed_graph__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__heat_map__ = __webpack_require__("./src/heat-map/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatMapModule", function() { return __WEBPACK_IMPORTED_MODULE_7__heat_map__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatMapComponent", function() { return __WEBPACK_IMPORTED_MODULE_7__heat_map__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatMapCellComponent", function() { return __WEBPACK_IMPORTED_MODULE_7__heat_map__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HeatCellSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_7__heat_map__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__line_chart__ = __webpack_require__("./src/line-chart/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineChartModule", function() { return __WEBPACK_IMPORTED_MODULE_8__line_chart__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_8__line_chart__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineComponent", function() { return __WEBPACK_IMPORTED_MODULE_8__line_chart__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LineSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_8__line_chart__["d"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__polar_chart__ = __webpack_require__("./src/polar-chart/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PolarChartModule", function() { return __WEBPACK_IMPORTED_MODULE_9__polar_chart__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PolarChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_9__polar_chart__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PolarSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_9__polar_chart__["c"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__number_card__ = __webpack_require__("./src/number-card/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NumberCardModule", function() { return __WEBPACK_IMPORTED_MODULE_10__number_card__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NumberCardComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__number_card__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "CardComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__number_card__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "CardSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_10__number_card__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pie_chart__ = __webpack_require__("./src/pie-chart/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieChartModule", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "AdvancedPieChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieChartComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieArcComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieGridComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieGridSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["f"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["h"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PieLabelComponent", function() { return __WEBPACK_IMPORTED_MODULE_11__pie_chart__["g"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__tree_map__ = __webpack_require__("./src/tree-map/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapModule", function() { return __WEBPACK_IMPORTED_MODULE_12__tree_map__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__tree_map__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapCellComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__tree_map__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TreeMapCellSeriesComponent", function() { return __WEBPACK_IMPORTED_MODULE_12__tree_map__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__gauge__ = __webpack_require__("./src/gauge/index.ts");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeModule", function() { return __WEBPACK_IMPORTED_MODULE_13__gauge__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeArcComponent", function() { return __WEBPACK_IMPORTED_MODULE_13__gauge__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeAxisComponent", function() { return __WEBPACK_IMPORTED_MODULE_13__gauge__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "GaugeComponent", function() { return __WEBPACK_IMPORTED_MODULE_13__gauge__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "LinearGaugeComponent", function() { return __WEBPACK_IMPORTED_MODULE_13__gauge__["e"]; });
+
 
 
 
@@ -15422,12 +15426,14 @@ var LineComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pie_chart_pie_chart_module__ = __webpack_require__("./src/pie-chart/pie-chart.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__tree_map_tree_map_module__ = __webpack_require__("./src/tree-map/tree-map.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__gauge_gauge_module__ = __webpack_require__("./src/gauge/gauge.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__sparkline_sparkline_module__ = __webpack_require__("./src/sparkline/sparkline.module.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -15450,6 +15456,7 @@ var NgxChartsModule = /** @class */ (function () {
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__common_chart_common_module__["a" /* ChartCommonModule */],
                 __WEBPACK_IMPORTED_MODULE_3__area_chart_area_chart_module__["a" /* AreaChartModule */],
+                __WEBPACK_IMPORTED_MODULE_14__sparkline_sparkline_module__["a" /* SparklineModule */],
                 __WEBPACK_IMPORTED_MODULE_4__bar_chart_bar_chart_module__["a" /* BarChartModule */],
                 __WEBPACK_IMPORTED_MODULE_5__bubble_chart_bubble_chart_module__["a" /* BubbleChartModule */],
                 __WEBPACK_IMPORTED_MODULE_6__force_directed_graph_force_directed_graph_module__["a" /* ForceDirectedGraphModule */],
@@ -18347,6 +18354,303 @@ function ngxChartsPolyfills() {
     }
 }
 ngxChartsPolyfills();
+
+
+/***/ }),
+
+/***/ "./src/sparkline/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sparkline_module__ = __webpack_require__("./src/sparkline/sparkline.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__sparkline_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sparkline_component__ = __webpack_require__("./src/sparkline/sparkline.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__sparkline_component__["a"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./src/sparkline/sparkline.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ngx-charts-chart [view]=\"[width, height]\" [showLegend]=\"false\" [animations]=\"animations\">\n  <svg:g [attr.transform]=\"transform\" class=\"line-chart chart\">\n    <svg:g>\n      <svg:g *ngFor=\"let series of results; trackBy: trackBy\">\n        <svg:g\n          ngx-charts-line-series\n          [xScale]=\"xScale\"\n          [yScale]=\"yScale\"\n          [colors]=\"colors\"\n          [data]=\"series\"\n          [scaleType]=\"scaleType\"\n          [curve]=\"curve\"\n          [animations]=\"animations\"\n        />\n      </svg:g>\n    </svg:g>\n  </svg:g>\n</ngx-charts-chart>\n"
+
+/***/ }),
+
+/***/ "./src/sparkline/sparkline.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SparklineComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("@angular/core");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__angular_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3_scale__ = __webpack_require__("d3-scale");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3_scale___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_d3_scale__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_d3_shape__ = __webpack_require__("d3-shape");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_d3_shape___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_d3_shape__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common__ = __webpack_require__("./src/common/index.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+// Copied from here:
+// https://github.com/swimlane/ngx-charts/blob/master/src/app/custom-charts/sparkline/sparkline.component.ts
+var SparklineComponent = /** @class */ (function (_super) {
+    __extends(SparklineComponent, _super);
+    function SparklineComponent(chartElement, zone, cd) {
+        var _this = _super.call(this, chartElement, zone, cd) || this;
+        _this.chartElement = chartElement;
+        _this.zone = zone;
+        _this.cd = cd;
+        _this.autoScale = false;
+        _this.curve = __WEBPACK_IMPORTED_MODULE_2_d3_shape__["curveLinear"];
+        _this.scheme = 'cool';
+        _this.schemeType = 'linear';
+        _this.animations = true;
+        _this.margin = [0, 0, 0, 0];
+        return _this;
+    }
+    SparklineComponent.prototype.update = function () {
+        _super.prototype.update.call(this);
+        this.dims = Object(__WEBPACK_IMPORTED_MODULE_3__common__["F" /* calculateViewDimensions */])({
+            width: this.width,
+            height: this.height,
+            margins: this.margin,
+            showXAxis: false,
+            showYAxis: false,
+            xAxisHeight: 0,
+            yAxisWidth: 0,
+            showXLabel: false,
+            showYLabel: false,
+            showLegend: false,
+            legendType: this.schemeType
+        });
+        this.xDomain = this.getXDomain();
+        this.yDomain = this.getYDomain();
+        this.seriesDomain = this.getSeriesDomain();
+        this.xScale = this.getXScale(this.xDomain, this.dims.width);
+        this.yScale = this.getYScale(this.yDomain, this.dims.height);
+        this.setColors();
+        this.transform = "translate(" + this.dims.xOffset + " , " + this.margin[0] + ")";
+    };
+    SparklineComponent.prototype.getXDomain = function () {
+        var values = Object(__WEBPACK_IMPORTED_MODULE_3__common__["L" /* getUniqueXDomainValues */])(this.results);
+        this.scaleType = this.getScaleType(values);
+        var domain;
+        if (this.scaleType === 'time') {
+            var min = Math.min.apply(Math, values);
+            var max = Math.max.apply(Math, values);
+            domain = [min, max];
+        }
+        else if (this.scaleType === 'linear') {
+            values = values.map(function (v) { return Number(v); });
+            var min = Math.min.apply(Math, values);
+            var max = Math.max.apply(Math, values);
+            domain = [min, max];
+        }
+        else {
+            domain = values;
+        }
+        this.xSet = values;
+        return domain;
+    };
+    SparklineComponent.prototype.getYDomain = function () {
+        if (this.valueDomain) {
+            return this.valueDomain;
+        }
+        var domain = [];
+        for (var _i = 0, _a = this.results; _i < _a.length; _i++) {
+            var results = _a[_i];
+            for (var _b = 0, _c = results.series; _b < _c.length; _b++) {
+                var d = _c[_b];
+                if (domain.indexOf(d.value) < 0) {
+                    domain.push(d.value);
+                }
+                if (d.min !== undefined) {
+                    if (domain.indexOf(d.min) < 0) {
+                        domain.push(d.min);
+                    }
+                }
+                if (d.max !== undefined) {
+                    if (domain.indexOf(d.max) < 0) {
+                        domain.push(d.max);
+                    }
+                }
+            }
+        }
+        var min = Math.min.apply(Math, domain);
+        var max = Math.max.apply(Math, domain);
+        if (!this.autoScale) {
+            min = Math.min(0, min);
+        }
+        return [min, max];
+    };
+    SparklineComponent.prototype.getSeriesDomain = function () {
+        return this.results.map(function (d) { return d.name; });
+    };
+    SparklineComponent.prototype.getXScale = function (domain, width) {
+        var scale;
+        if (this.scaleType === 'time') {
+            scale = Object(__WEBPACK_IMPORTED_MODULE_1_d3_scale__["scaleTime"])()
+                .range([0, width])
+                .domain(domain);
+        }
+        else if (this.scaleType === 'linear') {
+            scale = Object(__WEBPACK_IMPORTED_MODULE_1_d3_scale__["scaleLinear"])()
+                .range([0, width])
+                .domain(domain);
+        }
+        else if (this.scaleType === 'ordinal') {
+            scale = Object(__WEBPACK_IMPORTED_MODULE_1_d3_scale__["scalePoint"])()
+                .range([0, width])
+                .padding(0.1)
+                .domain(domain);
+        }
+        return scale;
+    };
+    SparklineComponent.prototype.getYScale = function (domain, height) {
+        return Object(__WEBPACK_IMPORTED_MODULE_1_d3_scale__["scaleLinear"])()
+            .range([height, 0])
+            .domain(domain);
+    };
+    SparklineComponent.prototype.getScaleType = function (values) {
+        var date = true;
+        var num = true;
+        for (var _i = 0, values_1 = values; _i < values_1.length; _i++) {
+            var value = values_1[_i];
+            if (!this.isDate(value)) {
+                date = false;
+            }
+            if (typeof value !== 'number') {
+                num = false;
+            }
+        }
+        if (date) {
+            return 'time';
+        }
+        if (num) {
+            return 'linear';
+        }
+        return 'ordinal';
+    };
+    SparklineComponent.prototype.isDate = function (value) {
+        return value instanceof Date;
+    };
+    SparklineComponent.prototype.trackBy = function (index, item) {
+        return item.name;
+    };
+    SparklineComponent.prototype.setColors = function () {
+        var domain = this.schemeType === 'ordinal' ? this.seriesDomain : this.yDomain;
+        this.colors = new __WEBPACK_IMPORTED_MODULE_3__common__["k" /* ColorHelper */](this.scheme, this.schemeType, domain, this.customColors);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "autoScale", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "curve", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "results", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "scheme", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "schemeType", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Array)
+    ], SparklineComponent.prototype, "valueDomain", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "animations", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Array)
+    ], SparklineComponent.prototype, "view", void 0);
+    SparklineComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'ngx-charts-sparkline',
+            template: __webpack_require__("./src/sparkline/sparkline.component.html"),
+            styles: [__webpack_require__("./src/common/base-chart.component.scss")],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None,
+            changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectionStrategy"].OnPush
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]])
+    ], SparklineComponent);
+    return SparklineComponent;
+}(__WEBPACK_IMPORTED_MODULE_3__common__["f" /* BaseChartComponent */]));
+
+
+
+/***/ }),
+
+/***/ "./src/sparkline/sparkline.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SparklineModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("@angular/core");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__angular_core__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_chart_common_module__ = __webpack_require__("./src/common/chart-common.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sparkline_component__ = __webpack_require__("./src/sparkline/sparkline.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SparklineModule = /** @class */ (function () {
+    function SparklineModule() {
+    }
+    SparklineModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [__WEBPACK_IMPORTED_MODULE_1__common_chart_common_module__["a" /* ChartCommonModule */]],
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__sparkline_component__["a" /* SparklineComponent */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__sparkline_component__["a" /* SparklineComponent */]
+            ]
+        })
+    ], SparklineModule);
+    return SparklineModule;
+}());
+
 
 
 /***/ }),

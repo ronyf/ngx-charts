@@ -18,6 +18,7 @@ import { NumberCardModule } from './number-card/number-card.module';
 import { PieChartModule } from './pie-chart/pie-chart.module';
 import { TreeMapModule } from './tree-map/tree-map.module';
 import { GaugeModule } from './gauge/gauge.module';
+import { SparklineModule } from './sparkline/sparkline.module';
 var NgxChartsModule = /** @class */ (function () {
     function NgxChartsModule() {
     }
@@ -26,6 +27,7 @@ var NgxChartsModule = /** @class */ (function () {
             exports: [
                 ChartCommonModule,
                 AreaChartModule,
+                SparklineModule,
                 BarChartModule,
                 BubbleChartModule,
                 ForceDirectedGraphModule,

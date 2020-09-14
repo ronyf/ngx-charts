@@ -15049,6 +15049,230 @@ var GaugeModule = /** @class */ (function () {
     return GaugeModule;
 }());
 
+function tickFormat(fieldType, groupByType) {
+    return function (label) {
+        if (label === 'No Value' || label === 'Other') {
+            return label;
+        }
+        if (fieldType === 'date' && groupByType === 'groupBy') {
+            var formatter = timeFormat('MM/DD/YYYY');
+            return formatter(label);
+        }
+        return label.toString();
+    };
+}
+
+var SparklineComponent = /** @class */ (function (_super) {
+    __extends(SparklineComponent, _super);
+    function SparklineComponent(chartElement, zone, cd) {
+        var _this = _super.call(this, chartElement, zone, cd) || this;
+        _this.chartElement = chartElement;
+        _this.zone = zone;
+        _this.cd = cd;
+        _this.autoScale = false;
+        _this.curve = curveLinear;
+        _this.scheme = 'cool';
+        _this.schemeType = 'linear';
+        _this.animations = true;
+        _this.margin = [0, 0, 0, 0];
+        return _this;
+    }
+    SparklineComponent.prototype.update = function () {
+        _super.prototype.update.call(this);
+        this.dims = calculateViewDimensions({
+            width: this.width,
+            height: this.height,
+            margins: this.margin,
+            showXAxis: false,
+            showYAxis: false,
+            xAxisHeight: 0,
+            yAxisWidth: 0,
+            showXLabel: false,
+            showYLabel: false,
+            showLegend: false,
+            legendType: this.schemeType
+        });
+        this.xDomain = this.getXDomain();
+        this.yDomain = this.getYDomain();
+        this.seriesDomain = this.getSeriesDomain();
+        this.xScale = this.getXScale(this.xDomain, this.dims.width);
+        this.yScale = this.getYScale(this.yDomain, this.dims.height);
+        this.setColors();
+        this.transform = "translate(" + this.dims.xOffset + " , " + this.margin[0] + ")";
+    };
+    SparklineComponent.prototype.getXDomain = function () {
+        var values = getUniqueXDomainValues(this.results);
+        this.scaleType = this.getScaleType(values);
+        var domain;
+        if (this.scaleType === 'time') {
+            var min$$1 = Math.min.apply(Math, values);
+            var max$$1 = Math.max.apply(Math, values);
+            domain = [min$$1, max$$1];
+        }
+        else if (this.scaleType === 'linear') {
+            values = values.map(function (v) { return Number(v); });
+            var min$$1 = Math.min.apply(Math, values);
+            var max$$1 = Math.max.apply(Math, values);
+            domain = [min$$1, max$$1];
+        }
+        else {
+            domain = values;
+        }
+        this.xSet = values;
+        return domain;
+    };
+    SparklineComponent.prototype.getYDomain = function () {
+        if (this.valueDomain) {
+            return this.valueDomain;
+        }
+        var domain = [];
+        for (var _i = 0, _a = this.results; _i < _a.length; _i++) {
+            var results = _a[_i];
+            for (var _b = 0, _c = results.series; _b < _c.length; _b++) {
+                var d = _c[_b];
+                if (domain.indexOf(d.value) < 0) {
+                    domain.push(d.value);
+                }
+                if (d.min !== undefined) {
+                    if (domain.indexOf(d.min) < 0) {
+                        domain.push(d.min);
+                    }
+                }
+                if (d.max !== undefined) {
+                    if (domain.indexOf(d.max) < 0) {
+                        domain.push(d.max);
+                    }
+                }
+            }
+        }
+        var min$$1 = Math.min.apply(Math, domain);
+        var max$$1 = Math.max.apply(Math, domain);
+        if (!this.autoScale) {
+            min$$1 = Math.min(0, min$$1);
+        }
+        return [min$$1, max$$1];
+    };
+    SparklineComponent.prototype.getSeriesDomain = function () {
+        return this.results.map(function (d) { return d.name; });
+    };
+    SparklineComponent.prototype.getXScale = function (domain, width) {
+        var scale;
+        if (this.scaleType === 'time') {
+            scale = scaleTime()
+                .range([0, width])
+                .domain(domain);
+        }
+        else if (this.scaleType === 'linear') {
+            scale = scaleLinear()
+                .range([0, width])
+                .domain(domain);
+        }
+        else if (this.scaleType === 'ordinal') {
+            scale = scalePoint()
+                .range([0, width])
+                .padding(0.1)
+                .domain(domain);
+        }
+        return scale;
+    };
+    SparklineComponent.prototype.getYScale = function (domain, height) {
+        return scaleLinear()
+            .range([height, 0])
+            .domain(domain);
+    };
+    SparklineComponent.prototype.getScaleType = function (values) {
+        var date = true;
+        var num = true;
+        for (var _i = 0, values_1 = values; _i < values_1.length; _i++) {
+            var value = values_1[_i];
+            if (!this.isDate(value)) {
+                date = false;
+            }
+            if (typeof value !== 'number') {
+                num = false;
+            }
+        }
+        if (date) {
+            return 'time';
+        }
+        if (num) {
+            return 'linear';
+        }
+        return 'ordinal';
+    };
+    SparklineComponent.prototype.isDate = function (value) {
+        return value instanceof Date;
+    };
+    SparklineComponent.prototype.trackBy = function (index, item) {
+        return item.name;
+    };
+    SparklineComponent.prototype.setColors = function () {
+        var domain = this.schemeType === 'ordinal' ? this.seriesDomain : this.yDomain;
+        this.colors = new ColorHelper(this.scheme, this.schemeType, domain, this.customColors);
+    };
+    var _a, _b, _c;
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "autoScale", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "curve", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "results", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "scheme", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "schemeType", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], SparklineComponent.prototype, "valueDomain", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], SparklineComponent.prototype, "animations", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], SparklineComponent.prototype, "view", void 0);
+    SparklineComponent = __decorate([
+        Component({
+            selector: 'ngx-charts-sparkline',
+            template: "<ngx-charts-chart [view]=\"[width, height]\" [showLegend]=\"false\" [animations]=\"animations\"><svg:g [attr.transform]=\"transform\" class=\"line-chart chart\"><svg:g><svg:g *ngFor=\"let series of results; trackBy: trackBy\"><svg:g ngx-charts-line-series [xScale]=\"xScale\" [yScale]=\"yScale\" [colors]=\"colors\" [data]=\"series\" [scaleType]=\"scaleType\" [curve]=\"curve\" [animations]=\"animations\"></svg:g></svg:g></svg:g></ngx-charts-chart>",
+            styles: [".ngx-charts{float:left;overflow:visible}.ngx-charts .arc,.ngx-charts .bar,.ngx-charts .circle{cursor:pointer}.ngx-charts .arc.active,.ngx-charts .arc:hover,.ngx-charts .bar.active,.ngx-charts .bar:hover,.ngx-charts .card.active,.ngx-charts .card:hover,.ngx-charts .cell.active,.ngx-charts .cell:hover{opacity:.8;transition:opacity .1s ease-in-out}.ngx-charts .arc:focus,.ngx-charts .bar:focus,.ngx-charts .card:focus,.ngx-charts .cell:focus{outline:0}.ngx-charts .arc.hidden,.ngx-charts .bar.hidden,.ngx-charts .card.hidden,.ngx-charts .cell.hidden{display:none}.ngx-charts g:focus{outline:0}.ngx-charts .area-series.inactive,.ngx-charts .line-series-range.inactive,.ngx-charts .line-series.inactive,.ngx-charts .polar-series-area.inactive,.ngx-charts .polar-series-path.inactive{transition:opacity .1s ease-in-out;opacity:.2}.ngx-charts .line-highlight{display:none}.ngx-charts .line-highlight.active{display:block}.ngx-charts .area{opacity:.6}.ngx-charts .circle:hover{cursor:pointer}.ngx-charts .label{font-size:12px;font-weight:400}.ngx-charts .tooltip-anchor{fill:#000}.ngx-charts .gridline-path{stroke:#ddd;stroke-width:1;fill:none}.ngx-charts .refline-path{stroke:#a8b2c7;stroke-width:1;stroke-dasharray:5;stroke-dashoffset:5}.ngx-charts .refline-label{font-size:9px}.ngx-charts .reference-area{fill-opacity:.05;fill:#000}.ngx-charts .gridline-path-dotted{stroke:#ddd;stroke-width:1;fill:none;stroke-dasharray:1,20;stroke-dashoffset:3}.ngx-charts .grid-panel rect{fill:none}.ngx-charts .grid-panel.odd rect{fill:rgba(0,0,0,.05)}"],
+            encapsulation: ViewEncapsulation.None,
+            changeDetection: ChangeDetectionStrategy.OnPush
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof ElementRef !== "undefined" && ElementRef) === "function" ? _a : Object, typeof (_b = typeof NgZone !== "undefined" && NgZone) === "function" ? _b : Object, typeof (_c = typeof ChangeDetectorRef !== "undefined" && ChangeDetectorRef) === "function" ? _c : Object])
+    ], SparklineComponent);
+    return SparklineComponent;
+}(BaseChartComponent));
+
+var SparklineModule = /** @class */ (function () {
+    function SparklineModule() {
+    }
+    SparklineModule = __decorate([
+        NgModule({
+            imports: [ChartCommonModule],
+            declarations: [
+                SparklineComponent
+            ],
+            exports: [
+                SparklineComponent
+            ]
+        })
+    ], SparklineModule);
+    return SparklineModule;
+}());
+
 var NgxChartsModule = /** @class */ (function () {
     function NgxChartsModule() {
     }
@@ -15057,6 +15281,7 @@ var NgxChartsModule = /** @class */ (function () {
             exports: [
                 ChartCommonModule,
                 AreaChartModule,
+                SparklineModule,
                 BarChartModule,
                 BubbleChartModule,
                 ForceDirectedGraphModule,
@@ -15073,17 +15298,4 @@ var NgxChartsModule = /** @class */ (function () {
     return NgxChartsModule;
 }());
 
-function tickFormat(fieldType, groupByType) {
-    return function (label) {
-        if (label === 'No Value' || label === 'Other') {
-            return label;
-        }
-        if (fieldType === 'date' && groupByType === 'groupBy') {
-            var formatter = timeFormat('MM/DD/YYYY');
-            return formatter(label);
-        }
-        return label.toString();
-    };
-}
-
-export { NgxChartsModule, ChartCommonModule, LegendComponent, ScaleLegendComponent, LegendEntryComponent, AdvancedLegendComponent, TooltipModule, TooltipService, TooltipContentComponent, TooltipDirective, StyleTypes, AlignmentTypes, ShowTypes, AxesModule, AxisLabelComponent, XAxisComponent, XAxisTicksComponent, YAxisComponent, YAxisTicksComponent, reduceTicks, CountUpDirective, count, decimalChecker, Timeline, ColorHelper, ChartComponent, AreaComponent, BaseChartComponent, CircleComponent, CircleSeriesComponent, gridSize, gridLayout, GridPanelComponent, GridPanelSeriesComponent, SvgLinearGradientComponent, SvgRadialGradientComponent, TooltipArea, tickFormat, trimLabel, calculateViewDimensions, formatLabel, escapeLabel, getUniqueXDomainValues, getScaleType, AreaChartModule, AreaChartComponent, AreaChartNormalizedComponent, AreaChartStackedComponent, AreaSeriesComponent, BarChartModule, BarComponent, BarHorizontalComponent, BarHorizontal2DComponent, BarHorizontalNormalizedComponent, BarHorizontalStackedComponent, SeriesHorizontal, BarLabelComponent, BarVerticalComponent, BarVertical2DComponent, BarVerticalNormalizedComponent, BarVerticalStackedComponent, D0Types, SeriesVerticalComponent, BubbleChartModule, BubbleChartComponent, getDomain, getScale, BubbleSeriesComponent, ForceDirectedGraphModule, ForceDirectedGraphComponent, HeatMapModule, HeatMapComponent, HeatMapCellComponent, HeatCellSeriesComponent, LineChartModule, LineChartComponent, LineComponent, LineSeriesComponent, PolarChartModule, PolarChartComponent, PolarSeriesComponent, NumberCardModule, NumberCardComponent, CardComponent, CardSeriesComponent, PieChartModule, AdvancedPieChartComponent, PieChartComponent, PieArcComponent, PieGridComponent, PieGridSeriesComponent, PieSeriesComponent, PieLabelComponent, TreeMapModule, TreeMapComponent, TreeMapCellComponent, TreeMapCellSeriesComponent, GaugeModule, GaugeArcComponent, GaugeAxisComponent, GaugeComponent, LinearGaugeComponent };
+export { NgxChartsModule, ChartCommonModule, LegendComponent, ScaleLegendComponent, LegendEntryComponent, AdvancedLegendComponent, TooltipModule, TooltipService, TooltipContentComponent, TooltipDirective, StyleTypes, AlignmentTypes, ShowTypes, AxesModule, AxisLabelComponent, XAxisComponent, XAxisTicksComponent, YAxisComponent, YAxisTicksComponent, reduceTicks, CountUpDirective, count, decimalChecker, Timeline, ColorHelper, ChartComponent, AreaComponent, BaseChartComponent, CircleComponent, CircleSeriesComponent, gridSize, gridLayout, GridPanelComponent, GridPanelSeriesComponent, SvgLinearGradientComponent, SvgRadialGradientComponent, TooltipArea, tickFormat, trimLabel, calculateViewDimensions, formatLabel, escapeLabel, getUniqueXDomainValues, getScaleType, AreaChartModule, AreaChartComponent, AreaChartNormalizedComponent, AreaChartStackedComponent, AreaSeriesComponent, SparklineModule, SparklineComponent, BarChartModule, BarComponent, BarHorizontalComponent, BarHorizontal2DComponent, BarHorizontalNormalizedComponent, BarHorizontalStackedComponent, SeriesHorizontal, BarLabelComponent, BarVerticalComponent, BarVertical2DComponent, BarVerticalNormalizedComponent, BarVerticalStackedComponent, D0Types, SeriesVerticalComponent, BubbleChartModule, BubbleChartComponent, getDomain, getScale, BubbleSeriesComponent, ForceDirectedGraphModule, ForceDirectedGraphComponent, HeatMapModule, HeatMapComponent, HeatMapCellComponent, HeatCellSeriesComponent, LineChartModule, LineChartComponent, LineComponent, LineSeriesComponent, PolarChartModule, PolarChartComponent, PolarSeriesComponent, NumberCardModule, NumberCardComponent, CardComponent, CardSeriesComponent, PieChartModule, AdvancedPieChartComponent, PieChartComponent, PieArcComponent, PieGridComponent, PieGridSeriesComponent, PieSeriesComponent, PieLabelComponent, TreeMapModule, TreeMapComponent, TreeMapCellComponent, TreeMapCellSeriesComponent, GaugeModule, GaugeArcComponent, GaugeAxisComponent, GaugeComponent, LinearGaugeComponent };

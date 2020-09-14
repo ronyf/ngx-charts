@@ -1,0 +1,37 @@
+import { ChangeDetectorRef, ElementRef, NgZone } from '@angular/core';
+import { BaseChartComponent, ColorHelper, ViewDimensions } from '../common';
+export declare class SparklineComponent extends BaseChartComponent {
+    protected chartElement: ElementRef;
+    protected zone: NgZone;
+    protected cd: ChangeDetectorRef;
+    autoScale: boolean;
+    curve: any;
+    results: any;
+    scheme: any;
+    schemeType: string;
+    valueDomain: number[];
+    animations: boolean;
+    view: [number, number];
+    dims: ViewDimensions;
+    xSet: any;
+    xDomain: any;
+    yDomain: any;
+    seriesDomain: any;
+    yScale: any;
+    xScale: any;
+    colors: ColorHelper;
+    scaleType: string;
+    transform: string;
+    margin: number[];
+    constructor(chartElement: ElementRef, zone: NgZone, cd: ChangeDetectorRef);
+    update(): void;
+    getXDomain(): any[];
+    getYDomain(): any[];
+    getSeriesDomain(): any[];
+    getXScale(domain: any, width: any): any;
+    getYScale(domain: any, height: any): any;
+    getScaleType(values: any): string;
+    isDate(value: any): boolean;
+    trackBy(index: any, item: any): string;
+    setColors(): void;
+}
